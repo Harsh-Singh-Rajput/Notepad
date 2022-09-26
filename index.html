@@ -1,14 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abyssinica+SIL&display=swap" rel="stylesheet">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="./Style/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notepad</title>
 </head>
+
 <body>
-    
+    <header>
+        <h1>
+            NOTEPAD
+        </h1>
+    </header>
+
+    <div id="content">
+        <div class="fileList">
+            <h5>File Lists</h5>
+            <ol id="files"></ol>
+        </div>
+
+        <div class="textContent">
+
+            <div class="toolStyle">
+                <div id="tool">
+                    <button id="save">Save</button>
+                    <button id="deleteAll">Delete All Files</button>
+                    <button id="copyAll">&#128203;</button>
+                </div id="tool">
+
+                <div id="style">
+                    <div id="bold-plain">
+                        <button id="bold">Bold</button>
+                        <button id="plain">Plain</button>
+                    </div>
+                    <div id="emp-nonemp">
+                        <button id="emphasized">Emphasized</button>
+                        <button id="unemphasized">Un-Emphasized</button>
+                    </div>
+                    <div id="underline-normal">
+                        <button id="underline">Underline</button>
+                        <button id="normal">Normal</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="a">
+                <textarea autocomplete="off" class=".b" id="text" cols="30" rows="10"></textarea>
+            </div>
+
+        </div>
+    </div>
+    <script src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.slim.min.js"
+        integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA=" crossorigin="anonymous"></script>
 </body>
-<script src="main.js"></script>
+
 </html>

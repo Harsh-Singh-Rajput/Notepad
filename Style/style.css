@@ -1,0 +1,177 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+
+}
+:root{
+    --black: #000000;
+    --white: #ffffff;
+    --grey: slategrey;
+    --small: .5em;
+    --medium: 1em;
+    --large: 2em;
+    --extra-large: 3em;
+    font-family: 'Abyssinica SIL', serif;
+
+}
+
+body{
+    background: radial-gradient(white, grey);
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    border: 1px solid black;
+}
+
+header{
+    background-color: hsl(197, 71%, 80%);
+    text-align: center;
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid grey;
+}
+
+header>h1{
+    text-shadow: grey 2px 4px;
+    /* padding: var(--small); */
+}
+
+
+#content{
+    display: flex;
+    width: 100%;
+    height: 90vh;
+
+    
+}
+
+.fileList{
+    width: 15%;
+    height: 100%;
+    
+}
+.textContent{
+    width: 85%;
+    height: 100%;
+    /* padding-left: 0px;
+    padding-right: 0px; */
+    
+}
+
+.a{
+    
+    background-color: gainsboro;
+    border-radius: 4px;
+    height: 85%;
+    background-color: gainsboro;
+    border-radius: 4px;
+    margin-top: 1em;
+    /* padding: .5em; */
+}
+
+#text{
+    /* margin: 0px 1em; */
+    /* margin-right: 1em; */
+    width: 100%;
+    height: 100%; 
+    position:relative;
+    resize: none;
+    display: inline-block; 
+    
+}
+.toolStyle{
+    width: 100%;
+    height: 2em;
+    display: flex;
+    background-color: gainsboro;
+    border-radius: 4px;
+    
+}
+.tool>h5{
+    margin: auto;
+}
+#style{
+    /* display: flex; */
+    width: 70%;
+    margin-bottom: 1em;
+    display: flex;
+    /* overflow: scroll; */
+}
+
+
+#save{
+    margin: auto 16px;
+
+}
+#deleteAll{
+    margin: auto 16px;
+}
+#copyAll{
+    margin: auto 16px;
+}
+#save>button:hover{
+    background-color: skyblue;
+    padding: auto;
+
+}
+#deleteAll>button:hover{
+    background-color: skyblue;
+    padding: auto;
+
+}
+#copyAll>button:hover{
+    background-color: skyblue;
+    padding: auto;
+
+}
+
+#bold-plain>button:hover{
+    background-color: skyblue;
+    padding: auto;
+
+}
+#emp-nonemp{
+    margin: auto 16px;
+}
+#underline-normal{
+    margin: auto 16px;
+}
+#bold-plain{
+    margin: auto 16px;
+}
+#bold-plain>button:hover{
+    background-color: skyblue;
+    padding: auto;
+
+}
+#emp-nonemp>button:hover{
+    background-color: skyblue;
+    padding: auto;
+
+}
+#underline-normal>button:hover{
+    background-color: skyblue;
+    padding: auto;
+
+}
+#bold-plain>button:hover{
+    background-color: skyblue;
+    padding: auto;
+
+}
+
+.list{
+    cursor: pointer;
+}
+
+#content>div{
+background-color: #f1f1f1;
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px
+}
+
+ul>li:hover{
+    color: bisque;
+    
+}
