@@ -1,8 +1,8 @@
 <p align="center"><img src="https://github.com/Harsh-Singh-Rajput/Notepad/blob/main/Email Banners-Dark.png"></p>
 <h1 align="center"> Hacktoberfest 2022 </h1>
 
-<p align = "center"> Kindly maintain patience, we will accept every valid Pull Request and will merge it in main branch!!! </p>
-***
+***<p align = "center"> Kindly maintain patience, we will accept every valid Pull Request and will merge it in main branch!!! </p>***
+
 <h3 align="center">
     <a href="https://hacktoberfest.com/">
         Link To HacktoberFest 2022
