@@ -1,4 +1,4 @@
-<p align="center"><img src="shorturl.at/bGNOU"></p>
+<p align="center"><img src="https://github.com/Harsh-Singh-Rajput/Notepad/blob/main/Email Banners-Dark.png"></p>
 <h1 align="center"> Hacktoberfest 2021 </h1>
 
 <h1 align="center"> Hacktoberfest 2022 </h1>
