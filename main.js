@@ -68,7 +68,21 @@ document.addEventListener("DOMContentLoaded", function(){
         }
         else{
             console.log(fileArray);
-            removeListItem(fileArray)
+            Toastify({
+
+                text: "File saved Successfully.",
+                gravity:"top",
+                position:"center",
+                duration: 2000,
+                style:
+                {
+                  
+                  background: "-webkit-linear-gradient(315deg, #41cb1b, #9ACD32)"
+                }
+                
+                }).showToast(); 
+            
+            removeListItem(fileArray);
             return 1
         }
     }
@@ -183,19 +197,7 @@ document.addEventListener("DOMContentLoaded", function(){
     
     save.addEventListener("click", function(){
         let fileName = prompt("Enter File name to be saved")
-        Toastify({
-
-            text: "File saved Successfully.",
-            gravity:"top",
-            position:"center",
-            duration: 2000,
-            style:
-            {
-              
-              background: "-webkit-linear-gradient(315deg, #41cb1b, #9ACD32)"
-            }
-            
-            }).showToast();
+        
         
         if (saveFile(fileName)){
             // console.log(fileArray);
@@ -211,7 +213,8 @@ document.addEventListener("DOMContentLoaded", function(){
             displayFile(fileArray)
             // console.log(fileArray);
             
-        }   
+        }  
+        
        
 
     })
