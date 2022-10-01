@@ -19,18 +19,70 @@ document.addEventListener("DOMContentLoaded", function(){
     
     function saveFile(fileName){
         if (localStorage.getItem(fileName)){
-            alert("File already exists. Change the file name")
+            Toastify({
+
+                text: "File already exists. Please change the file name.",
+                gravity:"top",
+                position:"center",
+                duration: 3000,
+                style:
+                {
+                  background:"linear-gradient(to right, #00b09b, #96c93d)"      
+                }
+                
+                }).showToast();
             return 0
         }
         else if(fileName === null){
-            alert("Operation Terminated...")
+            
+            Toastify({
+
+                text: "Operation Terminated...",
+                gravity:"top",
+                position:"center",
+                duration: 2000,
+                style:
+                { 
+                  background:"linear-gradient(to right, #FF0000, #FF8C00)"      
+                  
+                }
+                
+                }).showToast();
+            
         }
         else if(fileName == ' '){
-            alert("Enter Valid Name")
+           
+            Toastify({
+
+                text: "Enter  valid name",
+                gravity:"top",
+                position:"center",
+                duration: 2000,
+                style:
+                {
+                  //background:"linear-gradient(to right, #00b09b, #96c93d)"      
+                  background: "-webkit-linear-gradient(315deg, #73a5ff, #5477f5)"
+                }
+                
+                }).showToast();
         }
         else{
             console.log(fileArray);
-            removeListItem(fileArray)
+            Toastify({
+
+                text: "File saved Successfully.",
+                gravity:"top",
+                position:"center",
+                duration: 2000,
+                style:
+                {
+                  
+                  background: "-webkit-linear-gradient(315deg, #41cb1b, #9ACD32)"
+                }
+                
+                }).showToast(); 
+            
+            removeListItem(fileArray);
             return 1
         }
     }
@@ -145,8 +197,11 @@ document.addEventListener("DOMContentLoaded", function(){
     
     save.addEventListener("click", function(){
         let fileName = prompt("Enter File name to be saved")
+        
+        
         if (saveFile(fileName)){
             // console.log(fileArray);
+           
             
             fileArray.push(fileName)
             jsonFileArray = JSON.stringify(fileArray);
@@ -157,11 +212,28 @@ document.addEventListener("DOMContentLoaded", function(){
             localStorage.setItem(fileName, jsonTextContent);
             displayFile(fileArray)
             // console.log(fileArray);
-        }   
+            
+        }  
+        
+       
+
     })
 
     deleteAll.addEventListener("click", function(){
         {
+            Toastify({
+
+                text: "All files deleted Successfully.",
+                gravity:"top",
+                position:"center",
+                duration: 2000,
+                style:
+                {
+                  
+                  background: "-webkit-linear-gradient(315deg, #f90c0c, #FFAE42)"
+                }
+                
+                }).showToast();
             console.log("deleteall");
             textArea.value = ''
             removeListItem(fileArray)
@@ -169,6 +241,7 @@ document.addEventListener("DOMContentLoaded", function(){
             // localStorage.removeItem("fileArray")
             fileArray = []
             // console.log(fileArray);
+            
         }
     })
 
@@ -176,7 +249,20 @@ document.addEventListener("DOMContentLoaded", function(){
     copyAll.addEventListener("click", function(){
         let textContent = document.querySelector("#text").value;
         navigator.clipboard.writeText(textContent).then(function(){
-            alert("Text copied to clipboard");
+            
+            Toastify({
+
+                text: "Text copied to clipboard.",
+                gravity:"top",
+                position:"center",
+                duration: 2000,
+                style:
+                {
+                   
+                  background: "-webkit-linear-gradient(315deg, #73a6ff, #5377f5)"
+                }
+                
+                }).showToast();
         });
     })
     
