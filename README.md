@@ -43,7 +43,8 @@ To earn your Hacktoberfest tee or tree reward, you must register and make four v
     2. Star this repo
     3. Make the feature branch 
     4. Add a file/Made improvement/Bug Fixex/Add feature or valuable changes to the feature branch
-    4. commit the code from the feature branch
+    4. Commit the code from the feature branch
+    6. Add your github name and profile link in CONTRIBUTING.md file
     5. Make pull request from feature branch
 ***
 <h2 align="center">
