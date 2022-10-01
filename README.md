@@ -55,7 +55,11 @@ To earn your Hacktoberfest tee or tree reward, you must register and make four v
 ## Contributors 😎
 
 <p align="center">
-  <a href="https://github.com/Harsh-Singh-Rajput/Notepad/community_contributors"><img src="https://contributors-img.web.app/image?repo=Harsh-Singh-Rajput/Notepad" /></a>
+  <a href="https://github.com/Harsh-Singh-Rajput/Notepad/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Harsh-Singh-Rajput/Notepad" />
+</a>
+
+
 </p>
 
 ##### **`All the Contributors will be featured above.`:heart_eyes: `Don't forget to Star`:star:`this repository`**
