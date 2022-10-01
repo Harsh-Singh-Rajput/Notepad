@@ -192,7 +192,7 @@ document.addEventListener("DOMContentLoaded", function(){
             style:
             {
               
-              background: "-webkit-linear-gradient(315deg, #41cb1b, #)"
+              background: "-webkit-linear-gradient(315deg, #41cb1b, #9ACD32)"
             }
             
             }).showToast();
