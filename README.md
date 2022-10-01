@@ -41,9 +41,10 @@ To earn your Hacktoberfest tee or tree reward, you must register and make four v
 
     1. Fork this repo
     2. Star this repo
-    3. Add a file/Made improvement/Bug Fixex/Add feature or valuable changes
-    4. commit the code
-    5. Make pull request
+    3. Make the feature branch 
+    4. Add a file/Made improvement/Bug Fixex/Add feature or valuable changes to the feature branch
+    4. commit the code from the feature branch
+    5. Make pull request from feature branch
 ***
 <h2 align="center">
     <p>
