@@ -4,12 +4,17 @@ document.addEventListener("DOMContentLoaded", function(){
     let deleteAll = document.getElementById("deleteAll");
     let copyAll = document.getElementById("copyAll");
     let textArea = document.getElementById("text");
+    let content = document.querySelector("#content");
+    let textContent = document.querySelector(".textContent");
+    let fileList = document.querySelector(".fileList");
     let bold = document.getElementById("bold")
     let plain = document.getElementById("plain")
     let emphasized = document.getElementById("emphasized")
     let unemphasized = document.getElementById("unemphasized")
     let underline = document.getElementById("underline")
     let normal = document.getElementById("normal")
+    let dark_mode = document.getElementById("dark_Mode")
+    let light_mode = document.getElementById("light_Mode")
     fileArray = [];
     if (localStorage.getItem("fileArray")){
         fileArray = JSON.parse(localStorage.getItem("fileArray"))
@@ -123,6 +128,30 @@ document.addEventListener("DOMContentLoaded", function(){
     unemphasized.addEventListener("click", function(){
         textArea.style.fontStyle = '';
     });
+    dark_mode.addEventListener("click", function(){
+        textArea.style.background = 'black';
+        textArea.style.color = 'white';
+        fileList.style.background = 'black';
+        fileList.style.color = 'white';
+        content.style.background = 'black';
+        content.style.color = 'white';
+        textContent.style.background = 'black';
+        textContent.style.color = 'white';
+
+        fileList.style.border = '1px solid #f1f2f4'
+    })
+    light_mode.addEventListener("click", function(){
+        textArea.style.background = 'white';
+        textArea.style.color = 'black';
+        fileList.style.background = 'white';
+        fileList.style.color = 'black';
+        content.style.background = 'white';
+        content.style.color = 'black';
+        textContent.style.background = 'white';
+        textContent.style.color = 'black';
+        
+        fileList.style.border = '1px solid black'
+    })
 
     $(document).on('click', '#files li', function(e){
         // console.log("file clicked");
