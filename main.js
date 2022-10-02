@@ -22,6 +22,29 @@ document.addEventListener("DOMContentLoaded", function () {
         displayFile(fileArray)
     }
 
+    if(textArea.style.fontWeight){
+        bold.style.background = 'rgb(250, 229, 136)';
+    } else {
+        plain.style.background = 'rgb(250, 229, 136)';
+    }
+
+    if(textArea.style.fontStyle){
+        emphasized.style.background = 'rgb(250, 229, 136)';
+    } else {
+        unemphasized.style.background = 'rgb(250, 229, 136)';
+    }
+
+    if(textArea.style.textDecoration){
+        underline.style.background = 'rgb(250, 229, 136)';
+    } else {
+        normal.style.background = 'rgb(250, 229, 136)';
+    }
+
+    if(textArea.style.background == 'white'){
+        dark_mode.style.background = 'rgb(250, 229, 136)';
+    } else {
+        light_mode.style.background = 'rgb(250, 229, 136)';
+    }
 
     function saveFile(fileName) {
         if (localStorage.getItem(fileName)) {
@@ -113,21 +136,33 @@ document.addEventListener("DOMContentLoaded", function () {
 
     bold.addEventListener("click", function () {
         textArea.style.fontWeight = 'bold';
+        bold.style.background = 'rgb(250, 229, 136)';
+        plain.style.background = '';
     });
     underline.addEventListener("click", function () {
         textArea.style.textDecoration = 'underline';
+        underline.style.background = 'rgb(250, 229, 136)';
+        normal.style.background = '';
     });
     emphasized.addEventListener("click", function () {
         textArea.style.fontStyle = 'italic';
+        emphasized.style.background = 'rgb(250, 229, 136)';
+        unemphasized.style.background = '';
     });
     plain.addEventListener("click", function () {
         textArea.style.fontWeight = '';
+        plain.style.background = 'rgb(250, 229, 136)';
+        bold.style.background = '';
     });
     normal.addEventListener("click", function () {
         textArea.style.textDecoration = '';
+        normal.style.background = 'rgb(250, 229, 136)';
+        underline.style.background = '';
     });
     unemphasized.addEventListener("click", function () {
         textArea.style.fontStyle = '';
+        unemphasized.style.background = 'rgb(250, 229, 136)';
+        emphasized.style.background = '';
     });
     dark_mode.addEventListener("click", function () {
         // lower left div
