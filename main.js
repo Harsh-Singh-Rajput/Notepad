@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function(){
                 }).showToast();
             
         }
-        else if(fileName == ' '){
+        else if(fileName?.trim() == ' '){
            
             Toastify({
 
