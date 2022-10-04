@@ -303,3 +303,7 @@ div.cont {
   color: #fff;
   outline: none;
 }
+
+.active {
+  background-color: #fae588;
+}
