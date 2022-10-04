@@ -137,6 +137,7 @@ header {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
     border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
+
 #heading {
   position: relative;
   font-size: 5vh;
@@ -173,7 +174,7 @@ header {
   padding: auto;
 }
 #emp-nonemp {
-  margin: auto 16px;
+  /* margin: auto; */
 
   cursor: pointer;
   outline: 0;
@@ -306,4 +307,26 @@ div.cont {
 
 .active {
   background-color: #fae588;
+}
+
+button {
+  padding: 0.3rem 0.5rem;
+}
+
+#deleteAll,
+#save {
+  width: 100px;
+  font-size: 0.7rem;
+  padding: 0.3rem 0;
+  font-weight: bold;
+}
+
+#style {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#emp-nonemp {
+  display: flex;
 }
