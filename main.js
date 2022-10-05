@@ -249,3 +249,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+
+//  fileLIst toggle button
+var toggleBtn = document.getElementById("fileListToggleBtn");
+var toggleComponent = document.getElementById("fileList");
+toggleBtn.addEventListener("click", ()=>{
+  toggleComponent.classList.toggle("fileListOpen");
+})
