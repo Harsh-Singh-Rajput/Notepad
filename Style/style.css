@@ -67,14 +67,14 @@ header {
 
 }
 
-.a {
+.textarea-div {
 
     background-color: gainsboro;
     border-radius: 4px;
     height: 85%;
     background-color: gainsboro;
     border-radius: 4px;
-    margin-top: 1em;
+    /* margin-top: 1em; */
     /* padding: .5em; */
 }
 
@@ -92,6 +92,7 @@ header {
 .toolStyle {
     padding-left: 2vw;
     padding-top: 0.3vw;
+    margin-bottom: 0.2em;
     width: 100%;
     height: 3em;
     display: flex;
