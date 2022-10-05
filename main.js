@@ -96,21 +96,33 @@ document.addEventListener("DOMContentLoaded", function () {
 
   bold.addEventListener("click", function () {
     textArea.style.fontWeight = "bold";
+    bold.classList.add("active");
+    plain.classList.remove("active");
   });
   underline.addEventListener("click", function () {
     textArea.style.textDecoration = "underline";
+    underline.classList.add("active");
+    normal.classList.remove("active");
   });
   emphasized.addEventListener("click", function () {
     textArea.style.fontStyle = "italic";
+    emphasized.classList.add("active");
+    unemphasized.classList.remove("active");
   });
   plain.addEventListener("click", function () {
     textArea.style.fontWeight = "";
+    plain.classList.add("active");
+    bold.classList.remove("active");
   });
   normal.addEventListener("click", function () {
     textArea.style.textDecoration = "";
+    normal.classList.add("active");
+    underline.classList.remove("active");
   });
   unemphasized.addEventListener("click", function () {
     textArea.style.fontStyle = "";
+    unemphasized.classList.add("active");
+    emphasized.classList.remove("active");
   });
 
   $(document).on("click", "#files li", function (e) {
