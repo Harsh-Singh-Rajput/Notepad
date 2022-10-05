@@ -44,267 +44,195 @@ header{
 }
 
 
-
-#content{
-    display: flex;
-    width: 100%;
-    height: 90vh;
-
-    
+#content {
+  display: flex;
+  width: 100%;
+  height: 90vh;
 }
 
-.fileList{
-    width: 15%;
-    height: 100%;
-    
+.fileList {
+  width: 15%;
+  height: 100%;
+  z-index: 100;
 }
-.textContent{
-    width: 85%;
-    height: 100%;
-    /* padding-left: 0px;
+.textContent {
+  width: 85%;
+  height: 100%;
+  /* padding-left: 0px;
     padding-right: 0px; */
-    
 }
 
-.a{
-    
-    background-color: gainsboro;
-    border-radius: 4px;
-    height: 85%;
-    background-color: gainsboro;
-    border-radius: 4px;
-    margin-top: 1em;
-    /* padding: .5em; */
+.a {
+  background-color: gainsboro;
+  border-radius: 4px;
+  height: 85%;
+  background-color: gainsboro;
+  border-radius: 4px;
+  margin-top: 1em;
+  /* padding: .5em; */
 }
 
-#text{
-    /* margin: 0px 1em; */
-    /* margin-right: 1em; */
-    width: 100%;
-    height: 100%; 
-    position:relative;
-    resize: none;
-    display: inline-block; 
-    
-}
-.toolStyle{
-    padding-left: 2vw;
-    padding-top: 0.3vw;
-    width: 100%;
-    height: 2em;
-    display: flex;
-    background-color: rgb(195, 208, 222);
-    border-radius: 4px;
-    
-}
-.tool>h5{
-    margin: auto;
-}
-#style{
-    /* display: flex; */
-    width: 70%;
-    margin-bottom: em;
-    display: flex;
-    
-    /* overflow: scroll; */
+#text {
+  /* margin: 0px 1em; */
+  /* margin-right: 1em; */
+  width: 100%;
+  height: 100%;
+  position: relative;
+  resize: none;
+  display: inline-block;
 }
 
-
-#save{
-  
-    cursor: pointer;
-    outline: 0;
-    color: #fff;
-    background-color: #41cb1b;
-    border-color: #42de17;
-    display: inline-block;
-    font-weight: 400;
-    line-height: 1.5;
-    text-align: center;
-    border: 1px solid transparent;
-    padding: 6px 12px;
-    font-size: 16px;
-    border-radius: .25rem;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-  
-
-    
-
+.toolStyle {
+  padding: 12px;
+  display: flex;
+  background:linear-gradient(to right, bisque, rgb(250, 201, 109));
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.toolButtons{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.toolButtons button{
+  padding: 3px 4px;
+  background: linear-gradient(to right, rgb(254, 163, 163), rgb(205, 155, 249));
+  margin: 3px;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.toolButtons button:hover{
+  box-shadow: 2px 2px 2px gray;
+}
+.tool > h5 {
+  margin: auto;
+}
+#tool{
+    margin-right: 20px;
+}
+#tool button {
+  padding: 4px 22px;
+  background: linear-gradient(to right, rgb(251, 145, 145), rgb(188, 130, 238));
+  margin: 3px;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: bold;
+}
+#tool button:hover{
+  box-shadow: 2px 2px 2px gray;
 }
 #save:hover{
-    
-    
-        color: #fff;
-        background-color: #2be33b;
-        border-color: #6bd846;
-    
-
+  color: rgb(2, 248, 2);
 }
-#deleteAll{
-    margin: auto 16px;
-    
-    cursor: pointer;
-    outline: 0;
-    color: #fff;
-    background-color: #f90c0c;
-    border-color: #fd150d;
-    display: inline-block;
-    font-weight: 400;
-    line-height: 1.5;
-    text-align: center;
-    border: 1px solid transparent;
-    padding: 6px 12px;
-    font-size: 16px;
-    border-radius: .25rem;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-   
-
+#deleteAll:hover{
+  color: red;
 }
-#heading
-{
-    position: relative;
-    font-size: 5vh ;
-    line-height: 1.25em;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    color:transparent;
-    text-decoration: none;
-    -webkit-text-stroke: 0.015em rgba(255,255,255,0.5);
+#bold{
+  font-weight: 600;
 }
-#copyAll{
-    margin: auto 16px;
-    background-color: #369deb;
+#emphasized{
+  font-style: italic;
 }
-#save>button  :hover {
-    color: #fff;
-    background-color: #4de722;
-    border-color: #42de17;
-}
-
-#deleteAll:hover {
-    color: #fff;
-    background-color: #d7190b;
-    border-color: #f1f2f4;
+#underline{
+  text-decoration: underline;
 }
 
 
-#copyAll>button:hover{
-    background-color: skyblue;
-    padding: auto;
 
+#heading {
+  position: relative;
+  font-size: 5vh;
+  line-height: 1.25em;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: transparent;
+  text-decoration: none;
+  -webkit-text-stroke: 0.015em rgba(255, 255, 255, 0.5);
 }
 
-#bold-plain>button:hover{
-    background-color: #e7c6ff;
-    padding: auto;
-
-}
-#emp-nonemp{
-    margin: auto 16px;
-    
-    cursor: pointer;
-    outline: 0;
-    display: inline-block;
-    font-weight: 400;
-    line-height: 1.5;
-    text-align: center;
-    background-color: transparent;
-    border: 1px solid transparent;
-    padding: 6px 12px;
-    font-size: 1rem;
-    border-radius: .25rem;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-    color: #0d6efd;
-  
-    /* uncomment these to get distant buttons */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    justify-items: center;
-
-}
-#emp-nonemp :hover {
-    color: #000000;
-    background-color: #0d6efd;
-   
-}
-#underline-normal{
-    margin: auto 16px;
-    /* uncomment these to get distant buttons */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    justify-items: center;
-}
-#bold-plain{
-    margin: auto 16px;
-    
-    cursor: pointer;
-    outline: 0;
-    display: inline-block;
-    font-weight: 400;
-    line-height: 1.5;
-    text-align: center;
-    background-color: transparent;
-    border: 1px solid transparent;
-    padding: 6px 12px;
-    font-size: 1rem;
-    border-radius: .25rem;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-    color: #0d6efd;
-
-    /* uncomment these to get distant buttons */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    justify-items: center;
-}
-#mode{
-    /* uncomment these to get distant buttons */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    justify-items: center;
-}
-#bold-plain>button:hover{
-    background-color:#fae588;
-    padding: auto;
-
-}
-#emp-nonemp>button:hover{
-    background-color: #fae588;
-    padding: auto;
-
-}
-#underline-normal>button:hover{
-    background-color:#fae588;
-    padding: auto;
-
-
-}
-#bold-plain>button:hover{
-    background-color:#fae588;
-    padding: auto;
-
-}
-#mode>button:hover{
-    background-color:#fae588;
-    padding: auto;
-
+#bold-plain > button:hover {
+  background-color: #e7c6ff;
+  padding: auto;
 }
 
-.list{
-    cursor: pointer;
+.buttonPair{
+  display: flex;
+  flex-direction: row;
 }
 
-#content>div{
-background-color: #f1f1f1;
+.list {
+  cursor: pointer;
+}
+
+#content > div {
+  background-color: #f1f1f1;
   margin: 10px;
   padding: 20px;
-  font-size: 30px
+  font-size: 30px;
 }
 
-ul>li:hover{
-    color: bisque;
-    
+li:hover {
+  background-color: bisque;
 }
+
+div.cont {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-danger {
+  background-color: #f90c0c;
+  border-color: #fd150d;
+  color: #fff;
+  outline: none;
+}
+
+
+@media (max-width: 500px){
+  .fileList{
+    margin: 0px;
+    position: fixed;
+    bottom: 0px;
+    height: 10%;
+    width: 90%;
+    padding: 0px;
+  }
+  .fileListOpen{
+    height: 90% !important;
+  }
+  
+  .fileList h5{
+    margin: 0px;
+    background: bisque;
+    padding: 10px;
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+  .fileList h5:hover{
+    background: rgb(249, 218, 180);
+    box-shadow: 2px 2px 2px gray;
+  }
+  #files{
+    margin: 0px;
+  }
+  .a{
+    width: 90%;
+  }
+  .textContent{
+    width: 100%;
+  }
+  textarea{
+    width: 100%;
+  }
+}
+
+
+
+
+
