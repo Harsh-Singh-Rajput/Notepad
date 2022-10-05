@@ -15,8 +15,8 @@ document.addEventListener("DOMContentLoaded", function(){
         fileArray = JSON.parse(localStorage.getItem("fileArray"))
         displayFile(fileArray)
     }
-    
-    
+
+
     function saveFile(fileName){
         if (localStorage.getItem(fileName)){
             Toastify({
@@ -27,14 +27,14 @@ document.addEventListener("DOMContentLoaded", function(){
                 duration: 3000,
                 style:
                 {
-                  background:"linear-gradient(to right, #00b09b, #96c93d)"      
+                  background:"linear-gradient(to right, #00b09b, #96c93d)"
                 }
-                
+
                 }).showToast();
             return 0
         }
         else if(fileName === null){
-            
+
             Toastify({
 
                 text: "Operation Terminated...",
@@ -42,16 +42,16 @@ document.addEventListener("DOMContentLoaded", function(){
                 position:"center",
                 duration: 2000,
                 style:
-                { 
-                  background:"linear-gradient(to right, #FF0000, #FF8C00)"      
-                  
+                {
+                  background:"linear-gradient(to right, #FF0000, #FF8C00)"
+
                 }
-                
+
                 }).showToast();
-            
+
         }
         else if(fileName?.trim() == ' '){
-           
+
             Toastify({
 
                 text: "Enter  valid name",
@@ -60,10 +60,10 @@ document.addEventListener("DOMContentLoaded", function(){
                 duration: 2000,
                 style:
                 {
-                  //background:"linear-gradient(to right, #00b09b, #96c93d)"      
+                  //background:"linear-gradient(to right, #00b09b, #96c93d)"
                   background: "-webkit-linear-gradient(315deg, #73a5ff, #5477f5)"
                 }
-                
+
                 }).showToast();
         }
         else{
@@ -76,12 +76,12 @@ document.addEventListener("DOMContentLoaded", function(){
                 duration: 2000,
                 style:
                 {
-                  
+
                   background: "-webkit-linear-gradient(315deg, #41cb1b, #9ACD32)"
                 }
-                
-                }).showToast(); 
-            
+
+                }).showToast();
+
             removeListItem(fileArray);
             return 1
         }
@@ -134,6 +134,15 @@ document.addEventListener("DOMContentLoaded", function(){
         // removeStyle();
     })
 
+	$(".del").on("click", function (e) {
+		e.preventDefault();
+		$(this).parent().remove();
+		localStorage.removeItem(fileArray[parseInt(e.currentTarget.id)]);
+		fileArray=fileArray.filter((ele, i) => i!==parseInt(e.currentTarget.id));
+		jsonFileArray=JSON.stringify(fileArray);
+		localStorage.setItem("fileArray", jsonFileArray);
+		location.reload();
+	});
     // $("#files li p span").on('click', function(e){
     //     let idx = Number($(this).attr('id')) - 1;
     //     let arr = localStorage.getItem("fileArray");
@@ -157,9 +166,9 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
     // })
-    
+
     function displayFile(fileArray){
-        
+
         idx = 0
         for(let ele of fileArray) {
             ol = document.getElementById("files");
@@ -168,21 +177,24 @@ document.addEventListener("DOMContentLoaded", function(){
             li.setAttribute("id", `${ele}`);
             li.setAttribute("class", "list");
 
-            // span = document.createElement("span")
-            // span.setAttribute("id", `${idx}`);
-            // span.appendChild(document.createTextNode("❌"))
+					  span=document.createElement("span")
+					  span.setAttribute("id", `${idx}`);
+					 	span.setAttribute("class", "del");
+						span.appendChild(document.createTextNode("❌"))
 
-            p = document.createElement("p");
-            // p.setAttribute("id", `${ele}`);
-            p.appendChild(document.createTextNode(ele));
-            // p.appendChild(span);
+						p=document.createElement("p");
+						p.setAttribute("id", `${ele}`);
+						p.appendChild(document.createTextNode(ele));
+						p.appendChild(span);
 
 
-            li.appendChild(p);
-            ol.appendChild(li);
-            
-            idx += 1
-         
+
+					li.appendChild(p);
+					ol.appendChild(li);
+
+
+					idx+=1
+
         }
     }
 
@@ -194,28 +206,28 @@ document.addEventListener("DOMContentLoaded", function(){
         }
     }
 
-    
+
     save.addEventListener("click", function(){
         let fileName = prompt("Enter File name to be saved")
-        
-        
+
+
         if (saveFile(fileName)){
             // console.log(fileArray);
-           
-            
+
+
             fileArray.push(fileName)
             jsonFileArray = JSON.stringify(fileArray);
             localStorage.setItem("fileArray", jsonFileArray)
             let textContent = document.querySelector("#text").value;
             let jsonTextContent = JSON.stringify(textContent);
-            
+
             localStorage.setItem(fileName, jsonTextContent);
             displayFile(fileArray)
             // console.log(fileArray);
-            
-        }  
-        
-       
+
+        }
+
+
 
     })
 
@@ -229,10 +241,10 @@ document.addEventListener("DOMContentLoaded", function(){
                 duration: 2000,
                 style:
                 {
-                  
+
                   background: "-webkit-linear-gradient(315deg, #f90c0c, #FFAE42)"
                 }
-                
+
                 }).showToast();
             console.log("deleteall");
             textArea.value = ''
@@ -241,7 +253,7 @@ document.addEventListener("DOMContentLoaded", function(){
             // localStorage.removeItem("fileArray")
             fileArray = []
             // console.log(fileArray);
-            
+
         }
     })
 
@@ -249,7 +261,7 @@ document.addEventListener("DOMContentLoaded", function(){
     copyAll.addEventListener("click", function(){
         let textContent = document.querySelector("#text").value;
         navigator.clipboard.writeText(textContent).then(function(){
-            
+
             Toastify({
 
                 text: "Text copied to clipboard.",
@@ -258,13 +270,13 @@ document.addEventListener("DOMContentLoaded", function(){
                 duration: 2000,
                 style:
                 {
-                   
+
                   background: "-webkit-linear-gradient(315deg, #73a6ff, #5377f5)"
                 }
-                
+
                 }).showToast();
         });
     })
-    
-    
+
+
 })
