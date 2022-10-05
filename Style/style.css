@@ -1,10 +1,10 @@
-
-*{
+* {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
-
 }
-:root{
+
+:root {
     --black: #000000;
     --white: #ffffff;
     --grey: slategrey;
@@ -16,106 +16,109 @@
 
 }
 
-body{
+body {
     background: radial-gradient(white, rgb(153, 149, 140));
     background-repeat: no-repeat;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     border: 1px solid black;
 }
 
-header{
+header {
     background-color: hsl(197, 71%, 80%);
     box-sizing: border-box;
-  
+
     text-align: center;
     width: 100%;
     height: auto;
     position: relative;
-    font-size: 5vh ;
+    font-size: 5vh;
     line-height: 1.25em;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    color:black;
+    color: black;
     text-decoration: none;
-  
-    -webkit-text-stroke: 0.015em rgba(255,255,255,0.5);
-    
+
+    -webkit-text-stroke: 0.015em rgba(255, 255, 255, 0.5);
+
 }
 
 
 
-#content{
+#content {
     display: flex;
     width: 100%;
     height: 90vh;
 
-    
+
 }
 
-.fileList{
+.fileList {
     width: 15%;
     height: 100%;
-    
+
 }
-.textContent{
+
+.textContent {
     width: 85%;
     height: 100%;
     /* padding-left: 0px;
     padding-right: 0px; */
-    
+
 }
 
-.a{
-    
+.textarea-div {
+
     background-color: gainsboro;
     border-radius: 4px;
     height: 85%;
     background-color: gainsboro;
     border-radius: 4px;
-    margin-top: 1em;
+    /* margin-top: 1em; */
     /* padding: .5em; */
 }
 
-#text{
+#text {
     /* margin: 0px 1em; */
     /* margin-right: 1em; */
     width: 100%;
-    height: 100%; 
-    position:relative;
+    height: 100%;
+    position: relative;
     resize: none;
-    display: inline-block; 
-    
+    display: inline-block;
+
 }
-.toolStyle{
+
+.toolStyle {
     padding-left: 2vw;
     padding-top: 0.3vw;
+    margin-bottom: 0.2em;
     width: 100%;
-    height: 2em;
+    height: 3em;
     display: flex;
+    flex-direction: column;
     background-color: rgb(195, 208, 222);
     border-radius: 4px;
-    
 }
-.tool>h5{
+
+.tool>h5 {
     margin: auto;
 }
-#style{
-    /* display: flex; */
-    width: 70%;
-    margin-bottom: em;
+
+#style {
+    width: 90%;
+    margin-bottom: 0em;
     display: flex;
-    
-    /* overflow: scroll; */
+    justify-content: space-between;
 }
 
 
-#save{
-  
+#save {
+
     cursor: pointer;
     outline: 0;
     color: #fff;
-    background-color: #41cb1b;
+    background-color: #2be33b;
     border-color: #42de17;
     display: inline-block;
     font-weight: 400;
@@ -125,24 +128,25 @@ header{
     padding: 6px 12px;
     font-size: 16px;
     border-radius: .25rem;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-  
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 
-    
 
-}
-#save:hover{
-    
-    
-        color: #fff;
-        background-color: #2be33b;
-        border-color: #6bd846;
-    
+
 
 }
-#deleteAll{
+
+#save:hover {
+
+
+    color: #fff;
+    background-color: #41cb1b;
+    border-color: #6bd846;
+
+
+}
+
+#deleteAll {
     margin: auto 16px;
-    
     cursor: pointer;
     outline: 0;
     color: #fff;
@@ -156,26 +160,40 @@ header{
     padding: 6px 12px;
     font-size: 16px;
     border-radius: .25rem;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-   
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
 
 }
-#heading
-{
+
+#heading {
     position: relative;
-    font-size: 5vh ;
+    font-size: 5vh;
     line-height: 1.25em;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    color:transparent;
+    color: transparent;
     text-decoration: none;
-    -webkit-text-stroke: 0.015em rgba(255,255,255,0.5);
+    -webkit-text-stroke: 0.015em rgba(255, 255, 255, 0.5);
 }
-#copyAll{
-    margin: auto 16px;
+
+#copyAll {
+    cursor: pointer;
+    outline: 0;
+    color: #fff;
     background-color: #369deb;
+    border-color: #369deb;
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    font-size: 16px;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
-#save>button  :hover {
+
+#save>button :hover {
     color: #fff;
     background-color: #4de722;
     border-color: #42de17;
@@ -184,127 +202,153 @@ header{
 #deleteAll:hover {
     color: #fff;
     background-color: #d7190b;
-    border-color: #f1f2f4;
+    border-color: #d7190b;
 }
 
 
-#copyAll>button:hover{
+#copyAll:hover {
     background-color: skyblue;
-    padding: auto;
+    background-color: #0b8ff5;
 
 }
 
-#bold-plain>button:hover{
+#bold-plain>button:hover {
     background-color: #e7c6ff;
     padding: auto;
 
 }
-#emp-nonemp{
-    margin: auto 16px;
-    
+
+#emp-nonemp {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: 16px;
+    margin-right: 16px;
+    flex-direction: row;
     cursor: pointer;
     outline: 0;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    font-size: 1rem;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+
+#underline-normal {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 16px;
+    margin-right: 16px;
+    outline: 0;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    font-size: 1rem;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+#bold-plain {
+    /* margin: auto 16px; */
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#bold-plain>button{
+    cursor: pointer;
+    outline: 0;
+    color: #fff;
+    background-color: #17a2b8;
+    border-color: #17a2b8;
     display: inline-block;
     font-weight: 400;
     line-height: 1.5;
     text-align: center;
-    background-color: transparent;
     border: 1px solid transparent;
     padding: 6px 12px;
-    font-size: 1rem;
+    font-size: 16px;
     border-radius: .25rem;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-    color: #0d6efd;
-  
-    /* uncomment these to get distant buttons */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    justify-items: center;
-
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
-#emp-nonemp :hover {
-    color: #000000;
+#bold-plain>button:hover {
+    background-color: #07889c !important;
+    border-color: #07889c !important;
+    padding: auto;
+    cursor: pointer;
+}
+#emp-nonemp>button{
+    cursor: pointer;
+    outline: 0;
+    color: #fff;
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    font-size: 16px;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+#emp-nonemp>button:hover {
+    background-color: #07889c !important;
+    border-color: #07889c !important;
+    padding: auto;
+    cursor: pointer;
+    color: #fff;
+}
+#bold,#emphasized,#underline{
+    margin-right: 15px;
+}
+#underline-normal>button{
+    cursor: pointer;
+    outline: 0;
+    color: #fff;
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    font-size: 16px;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+#underline-normal>button:hover {
+    background-color: #07889c !important;
+    border-color: #07889c !important;
+    padding: auto;
+    cursor: pointer;
+    color: #fff;
+}
+
+#bold-plain>button:hover {
     background-color: #0d6efd;
-   
-}
-#underline-normal{
-    margin: auto 16px;
-    /* uncomment these to get distant buttons */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    justify-items: center;
-}
-#bold-plain{
-    margin: auto 16px;
-    
-    cursor: pointer;
-    outline: 0;
-    display: inline-block;
-    font-weight: 400;
-    line-height: 1.5;
-    text-align: center;
-    background-color: transparent;
-    border: 1px solid transparent;
-    padding: 6px 12px;
-    font-size: 1rem;
-    border-radius: .25rem;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-    color: #0d6efd;
-
-    /* uncomment these to get distant buttons */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    justify-items: center;
-}
-#mode{
-    /* uncomment these to get distant buttons */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    justify-items: center;
-}
-#bold-plain>button:hover{
-    background-color:#fae588;
-    padding: auto;
-
-}
-#emp-nonemp>button:hover{
-    background-color: #fae588;
-    padding: auto;
-
-}
-#underline-normal>button:hover{
-    background-color:#fae588;
-    padding: auto;
-
-
-}
-#bold-plain>button:hover{
-    background-color:#fae588;
-    padding: auto;
-
-}
-#mode>button:hover{
-    background-color:#fae588;
     padding: auto;
 
 }
 
-.list{
+.list {
     cursor: pointer;
 }
 
-#content>div{
-background-color: #f1f1f1;
-  margin: 10px;
-  padding: 20px;
-  font-size: 30px
+#content>div {
+    background-color: #f1f1f1;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px
 }
 
-ul>li:hover{
+ul>li:hover {
     color: bisque;
-    
+
 }

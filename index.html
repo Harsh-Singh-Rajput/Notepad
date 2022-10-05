@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Abyssinica+SIL&display=swap" rel="stylesheet">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="./Style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notepad</title>
@@ -29,34 +30,28 @@
         <div class="textContent">
 
             <div class="toolStyle">
-                <div id="tool">
-                    <button id="save">Save</button>
-                    <button id="deleteAll">Delete All Files</button>
-                    <button id="copyAll">&#128203;</button>
-                </div id="tool">
-
                 <div id="style">
                     <div id="bold-plain">
-                        <button id="bold">Bold</button>
+                        <button id="bold"><b>Bold</b></button>
                         <button id="plain">Plain</button>
                     </div>
                     <div id="emp-nonemp">
-                        <button id="emphasized">Emphasized</button>
+                        <button id="emphasized"><i>Emphasized</i></button>
                         <button id="unemphasized">Un-Emphasized</button>
                     </div>
                     <div id="underline-normal">
-                        <button id="underline">Underline</button>
+                        <button id="underline"><u>Underline</u></button>
                         <button id="normal">Normal</button>
                     </div>
-                    <div id="mode">
-                        <button id="dark_Mode">Dark Mode</button>
-                        <button id="light_Mode">Light Mode</button>
-                    </div>
                 </div>
-
+                <div id="tool">
+                    <button id="save">Save <i class="fas fa-save"></i></button>
+                    <button id="deleteAll">Delete All Files <i class="fas fa-trash-alt"></i></button>
+                    <button id="copyAll">Copy <i class="fas fa-copy"></i></button>
+                </div>
             </div>
 
-            <div class="a">
+            <div class="textarea-div">
                 <textarea autocomplete="off" class=".b" id="text" cols="30" rows="10"></textarea>
             </div>
 
