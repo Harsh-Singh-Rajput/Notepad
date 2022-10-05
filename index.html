@@ -15,19 +15,18 @@
 
 <body>
     <header>
-        <div style="--clr:#00ade1" >
+        <div style="--clr:#00ade1">
             NOTEPAD
         </div>
     </header>
 
     <div id="content">
-        <div class="fileList">
-            <h5>File Lists</h5>
+        <div class="fileList" id="fileList">
+            <h5 id="fileListToggleBtn">File Lists</h5>
             <ol id="files"></ol>
         </div>
 
         <div class="textContent">
-
             <div class="toolStyle">
                 <div id="tool">
                     <button id="save">Save</button>
@@ -35,20 +34,20 @@
                     <button id="copyAll">&#128203;</button>
                 </div id="tool">
 
-                <div id="style">
-                    <div id="bold-plain">
+                <div id="style" class="toolButtons">
+                    <div id="bold-plain" class="buttonPair">
                         <button id="bold">Bold</button>
                         <button id="plain">Plain</button>
                     </div>
-                    <div id="emp-nonemp">
+                    <div id="emp-nonemp" class="buttonPair">
                         <button id="emphasized">Emphasized</button>
                         <button id="unemphasized">Un-Emphasized</button>
                     </div>
-                    <div id="underline-normal">
+                    <div id="underline-normal" class="buttonPair">
                         <button id="underline">Underline</button>
                         <button id="normal">Normal</button>
                     </div>
-                    <div id="mode">
+                    <div id="mode" class="buttonPair">
                         <button id="dark_Mode">Dark Mode</button>
                         <button id="light_Mode">Light Mode</button>
                     </div>

@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let normal = document.getElementById("normal")
   let dark_mode = document.getElementById("dark_Mode")
   let light_mode = document.getElementById("light_Mode")
+
   fileArray = [];
   if (localStorage.getItem("fileArray")) {
       fileArray = JSON.parse(localStorage.getItem("fileArray"))
@@ -147,8 +148,11 @@ document.addEventListener("DOMContentLoaded", function () {
       // upper right div
       toolStyle.style.background = '#313538';
 
-      dark_mode.style.background = '#fae588'
-      light_mode.style.background = 'white'
+      dark_mode.style.background = '#fae588';
+      light_mode.style.background = 'white';
+      toggleBtn.style.background = "gray";
+      toggleBtn.style.color = "white";
+
   })
   light_mode.addEventListener("click", function () {
       textArea.style.background = 'white';
@@ -163,6 +167,8 @@ document.addEventListener("DOMContentLoaded", function () {
       fileList.style.border = '1px solid black'
       dark_mode.style.background = 'white'
       light_mode.style.background = '#fae588'
+      toggleBtn.style.background = "bisque";
+      toggleBtn.style.color = "black";
   })
 
   $(document).on('click', '#files li', function (e) {
@@ -309,3 +315,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 })
+
+
+
+//  fileLIst toggle button start
+var openFile = document.getElementById("files");
+var toggleBtn = document.getElementById("fileListToggleBtn");
+var toggleComponent = document.getElementById("fileList");
+
+openFile.addEventListener("click", () => {
+  toggleComponent.classList.toggle("fileListOpen");
+});
+toggleBtn.addEventListener("click", ()=>{
+  toggleComponent.classList.toggle("fileListOpen");
+})
+//  fileLIst toggle button end
+
+
+
+
+
+
+
+
+
