@@ -123,18 +123,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // removeStyle();
   });
 
-  $(document).on("click", "li div.cont .btn-danger", function (e) {
-    e.stopPropagation();
-    key = $(this).attr("id");
-    localStorage.removeItem(key);
-    fileArray = fileArray.filter((item) => item !== key);
-    localStorage.setItem("fileArray", JSON.stringify(fileArray));
-
-    $(document)
-      .find("li#" + key)
-      .remove();
-  });
-
   // $("#files li p span").on('click', function(e){
   //     let idx = Number($(this).attr('id')) - 1;
   //     let arr = localStorage.getItem("fileArray");
@@ -165,22 +153,16 @@ document.addEventListener("DOMContentLoaded", function () {
       li.setAttribute("id", `${ele}`);
       li.setAttribute("class", "list");
 
+      // span = document.createElement("span")
+      // span.setAttribute("id", `${idx}`);
+      // span.appendChild(document.createTextNode("❌"))
+
       p = document.createElement("p");
       // p.setAttribute("id", `${ele}`);
       p.appendChild(document.createTextNode(ele));
       // p.appendChild(span);
 
-      btn = document.createElement("button");
-      btn.setAttribute("id", `${ele}`);
-      btn.setAttribute("class", "btn btn-danger");
-      btn.appendChild(document.createTextNode("X"));
-
-      div = document.createElement("div");
-      div.setAttribute("class", "cont");
-
-      div.appendChild(p);
-      div.appendChild(btn);
-      li.appendChild(div);
+      li.appendChild(p);
       ol.appendChild(li);
 
       idx += 1;
