@@ -1,10 +1,10 @@
-
-*{
+* {
     margin: 0;
     box-sizing: border-box;
 
 }
-:root{
+
+:root {
     --black: #000000;
     --white: #ffffff;
     --grey: slategrey;
@@ -16,102 +16,133 @@
 
 }
 
-body{
+html,
+body {
+    width: 100%;
+    min-height: 100vh;
+}
+
+body {
     background: radial-gradient(white, rgb(153, 149, 140));
     background-repeat: no-repeat;
-    width: 100vw;
-    height: 100vh;
     border: 1px solid black;
 }
 
-header{
+header {
     background-color: hsl(197, 71%, 80%);
     box-sizing: border-box;
-  
+
     text-align: center;
     width: 100%;
     height: auto;
     position: relative;
-    font-size: 5vh ;
+    font-size: 5vh;
     line-height: 1.25em;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    color:black;
+    color: black;
     text-decoration: none;
-  
-    -webkit-text-stroke: 0.015em rgba(255,255,255,0.5);
-    
+
+    -webkit-text-stroke: 0.015em rgba(255, 255, 255, 0.5);
 }
 
+@media (max-width: 980px) {
 
+    #content {
+        flex-wrap: wrap;
+    }
 
-#content{
+    .fileList {
+        flex: 1;
+    }
+}
+
+#content {
     display: flex;
     width: 100%;
-    height: 90vh;
-
-    
+    min-height: 100vh;
 }
 
-.fileList{
+.fileList {
     width: 15%;
-    height: 100%;
-    
+    height: auto;
 }
-.textContent{
-    width: 85%;
-    height: 100%;
+
+.textContent {
     /* padding-left: 0px;
     padding-right: 0px; */
-    
+    width: 100%;
 }
 
-.a{
-    
+.a {
     background-color: gainsboro;
-    border-radius: 4px;
-    height: 85%;
+    /* border-radius: 4px */
     background-color: gainsboro;
     border-radius: 4px;
     margin-top: 1em;
+    display: flex;
+    width: 100%;
+    height: 77vh;
     /* padding: .5em; */
 }
 
-#text{
+#text {
     /* margin: 0px 1em; */
     /* margin-right: 1em; */
-    width: 100%;
-    height: 100%; 
-    position:relative;
+    flex: 1;
+    position: relative;
     resize: none;
-    display: inline-block; 
-    
+    display: inline-block;
+
 }
-.toolStyle{
-    padding-left: 2vw;
-    padding-top: 0.3vw;
-    width: 100%;
-    height: 2em;
+
+#tool {
     display: flex;
+    align-items: center;
+    justify-content: start;
+    flex: 1;
+    gap: 1rem;
+}
+
+.toolStyle {
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    justify-content: start;
     background-color: rgb(195, 208, 222);
     border-radius: 4px;
-    
+    padding: 0.5rem 2rem 0.9rem 2rem;
 }
-.tool>h5{
+
+
+.tool>h5 {
     margin: auto;
 }
-#style{
+
+#style {
     /* display: flex; */
-    width: 70%;
-    margin-bottom: em;
+    /* margin-bottom: em; */
+    height: 100%;
     display: flex;
-    
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: start;
+    gap: 1rem;
     /* overflow: scroll; */
 }
 
+#style button {
+    border: none;
+    border-radius: 4px;
+    padding: 0.2rem 0.5rem;
+    cursor: pointer;
+}
 
-#save{
-  
+
+#save {
+
     cursor: pointer;
     outline: 0;
     color: #fff;
@@ -125,24 +156,21 @@ header{
     padding: 6px 12px;
     font-size: 16px;
     border-radius: .25rem;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-  
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
 
-    
+#save:hover {
+
+
+    color: #fff;
+    background-color: #2be33b;
+    border-color: #6bd846;
+
 
 }
-#save:hover{
-    
-    
-        color: #fff;
-        background-color: #2be33b;
-        border-color: #6bd846;
-    
 
-}
-#deleteAll{
-    margin: auto 16px;
-    
+#deleteAll {
+
     cursor: pointer;
     outline: 0;
     color: #fff;
@@ -156,26 +184,27 @@ header{
     padding: 6px 12px;
     font-size: 16px;
     border-radius: .25rem;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-   
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
 
 }
-#heading
-{
+
+#heading {
     position: relative;
-    font-size: 5vh ;
+    font-size: 5vh;
     line-height: 1.25em;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    color:transparent;
+    color: transparent;
     text-decoration: none;
-    -webkit-text-stroke: 0.015em rgba(255,255,255,0.5);
+    -webkit-text-stroke: 0.015em rgba(255, 255, 255, 0.5);
 }
-#copyAll{
-    margin: auto 16px;
+
+#copyAll {
     background-color: #369deb;
 }
-#save>button  :hover {
+
+#save>button :hover {
     color: #fff;
     background-color: #4de722;
     border-color: #42de17;
@@ -188,34 +217,36 @@ header{
 }
 
 
-#copyAll>button:hover{
+#copyAll>button:hover {
     background-color: skyblue;
     padding: auto;
 
 }
 
-#bold-plain>button:hover{
+#bold-plain>button:hover {
     background-color: #e7c6ff;
     padding: auto;
 
 }
-#emp-nonemp{
-    margin: auto 16px;
-    
-    cursor: pointer;
+
+#emp-nonemp,
+#bold-plain,
+#underline-normal,
+#mode {
+    gap: 0.3rem;
     outline: 0;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-weight: 400;
     line-height: 1.5;
     text-align: center;
     background-color: transparent;
-    border: 1px solid transparent;
-    padding: 6px 12px;
     font-size: 1rem;
     border-radius: .25rem;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
     color: #0d6efd;
-  
+
     /* uncomment these to get distant buttons */
     display: flex;
     align-items: center;
@@ -223,88 +254,64 @@ header{
     justify-items: center;
 
 }
+
 #emp-nonemp :hover {
     color: #000000;
     background-color: #0d6efd;
-   
-}
-#underline-normal{
-    margin: auto 16px;
-    /* uncomment these to get distant buttons */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    justify-items: center;
-}
-#bold-plain{
-    margin: auto 16px;
-    
-    cursor: pointer;
-    outline: 0;
-    display: inline-block;
-    font-weight: 400;
-    line-height: 1.5;
-    text-align: center;
-    background-color: transparent;
-    border: 1px solid transparent;
-    padding: 6px 12px;
-    font-size: 1rem;
-    border-radius: .25rem;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-    color: #0d6efd;
-
-    /* uncomment these to get distant buttons */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    justify-items: center;
-}
-#mode{
-    /* uncomment these to get distant buttons */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    justify-items: center;
-}
-#bold-plain>button:hover{
-    background-color:#fae588;
-    padding: auto;
 
 }
-#emp-nonemp>button:hover{
+
+#mode {
+    /* uncomment these to get distant buttons */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+#bold-plain>button:hover {
     background-color: #fae588;
     padding: auto;
 
 }
-#underline-normal>button:hover{
-    background-color:#fae588;
-    padding: auto;
 
-
-}
-#bold-plain>button:hover{
-    background-color:#fae588;
-    padding: auto;
-
-}
-#mode>button:hover{
-    background-color:#fae588;
+#emp-nonemp>button:hover {
+    background-color: #fae588;
     padding: auto;
 
 }
 
-.list{
+#underline-normal>button:hover {
+    background-color: #fae588;
+    padding: auto;
+
+
+}
+
+#bold-plain>button:hover {
+    background-color: #fae588;
+    padding: auto;
+
+}
+
+#mode>button:hover {
+    background-color: #fae588;
+    padding: auto;
+
+}
+
+.list {
     cursor: pointer;
 }
 
-#content>div{
-background-color: #f1f1f1;
-  margin: 10px;
-  padding: 20px;
-  font-size: 30px
+#content>div {
+    background-color: #f1f1f1;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px
 }
 
-ul>li:hover{
+ul>li:hover {
     color: bisque;
-    
+
 }
