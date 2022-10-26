@@ -312,19 +312,5 @@ let textContent = document.querySelector(".textContent")
 let fileList = document.querySelector(".fileList")
 function menuDrop () {
 
-    fileList.style.display == "block" ? fileList.style.display = "none" : fileList.style.display = "block"
-    if (textContent.style.display == "" && textContent.style.width == "") {
-        textContent.style.width = "100px"
-    }
-
-    if (textContent.style.width == "100px" && textContent.style.display == "") {
-        textContent.style.width = "100%"
-    }
-
-    if (textContent.style.width == "100%" && textContent.style.display == "") {
-        textContent.style.width = "10vh"
-    }
-    if (textContent.style.width == "10vh" && textContent.style.display == "") {
-        textContent.style.width = "100%"
-    }
+    fileList.style.display == "block" ? (fileList.style.display = "none", textContent.style.width = "100%") : (fileList.style.display = "block", textContent.style.width = "10%")
 }
