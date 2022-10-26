@@ -104,8 +104,6 @@ header{
     display: flex;
     width: 100%;
     height: 92vh;
-
-
 }
 
 .fileList{
@@ -113,38 +111,30 @@ header{
     height: 100%;
     overflow-y: auto;
     display: none;
-
 }
 
 .textContent{
     width: 100%;
     height: 100%;
-    /* padding-left: 0px;
-    padding-right: 0px; */
-
 }
 
 .a{
-
     background-color: gainsboro;
     border-radius: 4px;
     height: 85%;
     background-color: gainsboro;
     border-radius: 4px;
     margin-top: 1em;
-    /* padding: .5em; */
 }
 
 #text{
-    /* margin: 0px 1em; */
-    /* margin-right: 1em; */
     width: 100%;
     height: 100%;
     position:relative;
     resize: none;
     display: inline-block;
-
 }
+
 .toolStyle{
     align-items: center;
     justify-content: left;
@@ -154,18 +144,15 @@ header{
     display: flex;
     background-color: rgb(195, 208, 222);
     border-radius: 4px;
-
 }
+
 .tool>h5{
     margin: auto;
 }
 #style{
-    /* display: flex; */
     width: 70%;
     margin-bottom: em;
     display: flex;
-
-    /* overflow: scroll; */
 }
 
 #save, #deleteAll, #copyAll {
@@ -180,7 +167,6 @@ header{
     height: 42px;
     font-size: 16px;
     border-radius: .25rem;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     align-items: center;
     justify-content: center;
 
@@ -196,7 +182,7 @@ header{
 }
 
 #deleteAll{
-    background-color: #f90c0c;
+    background-color: #ed4343;
 }
 
 #copyAll{
@@ -222,7 +208,6 @@ header{
 }
 #emp-nonemp{
     margin: auto 16px;
-
     cursor: pointer;
     outline: 0;
     display: inline-block;
@@ -236,8 +221,6 @@ header{
     border-radius: .25rem;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     color: #0d6efd;
-
-    /* uncomment these to get distant buttons */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -330,7 +313,7 @@ ul>li:hover{
 
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
     .fileList {
         display: none;
         width: 100vw;
@@ -383,4 +366,33 @@ ul>li:hover{
         bottom: 1%;
         width: auto;
     }
+}
+
+@media (min-width: 800px) {
+    .fileList {
+        display: block;
+        width: 36%;
+    }
+
+    header {
+        padding-left: 48px;
+    }
+    .container{
+        display: none;
+    }
+
+    #bold-plain, #emp-nonemp, #underline-normal, #mode {
+        padding: 1%;
+    }
+
+    #tool {
+        row-gap: 0;
+        margin: 0;
+        padding: 0;
+    }
+
+    .toolStyle {
+        padding-left: 1%;
+    }
+
 }

@@ -310,7 +310,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 let textContent = document.querySelector(".textContent")
 let fileList = document.querySelector(".fileList")
+const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
 function menuDrop () {
-
-    fileList.style.display == "block" ? (fileList.style.display = "none", textContent.style.width = "100%") : (fileList.style.display = "block", textContent.style.width = "10%")
+    if(vw < 800){
+        fileList.style.display == "block" ? (fileList.style.display = "none", textContent.style.width = "100%") : (fileList.style.display = "block", textContent.style.width = "10%")
+    }
 }
