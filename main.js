@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
               duration: 2000,
               style:
               {
-                  //background:"linear-gradient(to right, #00b09b, #96c93d)"      
+                  //background:"linear-gradient(to right, #00b09b, #96c93d)"
                   background: "-webkit-linear-gradient(315deg, #73a5ff, #5477f5)"
               }
 
@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", function () {
       textArea.style.background = '#3b3b3b';
       textArea.style.color = 'white';
 
-      // left hand div 
+      // left hand div
       fileList.style.background = '#1f2324';
       fileList.style.color = 'white';
 
@@ -306,6 +306,25 @@ document.addEventListener("DOMContentLoaded", function () {
           }).showToast();
       });
   })
-
-
 })
+
+let textContent = document.querySelector(".textContent")
+let fileList = document.querySelector(".fileList")
+function menuDrop () {
+
+    fileList.style.display == "block" ? fileList.style.display = "none" : fileList.style.display = "block"
+    if (textContent.style.display == "" && textContent.style.width == "") {
+        textContent.style.width = "100px"
+    }
+
+    if (textContent.style.width == "100px" && textContent.style.display == "") {
+        textContent.style.width = "100%"
+    }
+
+    if (textContent.style.width == "100%" && textContent.style.display == "") {
+        textContent.style.width = "10vh"
+    }
+    if (textContent.style.width == "10vh" && textContent.style.display == "") {
+        textContent.style.width = "100%"
+    }
+}

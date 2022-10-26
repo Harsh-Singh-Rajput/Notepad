@@ -9,12 +9,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="./Style/style.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@mdi/font@6.9.96/css/materialdesignicons.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notepad</title>
 </head>
 
 <body>
     <header>
+        <div class="container">
+            <input type="checkbox" id="checkbox-menu" onclick="menuDrop();">
+
+            <label for="checkbox-menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </label>
+
+        </div>
+
         <div style="--clr:#00ade1" >
             NOTEPAD
         </div>
@@ -30,9 +42,21 @@
 
             <div class="toolStyle">
                 <div id="tool">
-                    <button id="save">Save</button>
-                    <button id="deleteAll">Delete All Files</button>
-                    <button id="copyAll">&#128203;</button>
+                    <button id="save">
+                        <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M1 7H3V21H17V23H3C1.9 23 1 22.11 1 21V7M19 1H7C5.89 1 5 1.9 5 3V17C5 18.1 5.89 19 7 19H21C22.1 19 23 18.1 23 17V5L19 1M21 17H7V3H18.17L21 5.83V17M14 10C12.34 10 11 11.34 11 13S12.34 16 14 16 17 14.66 17 13 15.66 10 14 10M8 4H17V8H8V4Z" />
+                        </svg>
+                    </button>
+                    <button id="deleteAll">
+                        <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M9,3V4H4V6H5V19A2,2 0 0,0 7,21H17A2,2 0 0,0 19,19V6H20V4H15V3H9M7,6H17V19H7V6M9,8V17H11V8H9M13,8V17H15V8H13Z" />
+                        </svg>
+                    </button>
+                    <button id="copyAll">
+                        <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z" />
+                        </svg>
+                    </button>
                 </div id="tool">
 
                 <div id="style">
