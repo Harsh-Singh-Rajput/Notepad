@@ -13,7 +13,8 @@
     --medium: 1em;
     --large: 2em;
     --extra-large: 3em;
-    font-family: 'Abyssinica SIL', serif;
+    font-family: "Hoefler Text", serif;
+    font-style: italic;
 
 }
 
@@ -25,7 +26,8 @@ body{
 }
 
 header{
-    background-color: hsl(197, 71%, 80%);
+    background: rgb(2,218,136);
+    background: linear-gradient(90deg, rgba(2,218,136,1) 0%, rgba(58,215,105,0.7931547619047619) 24%, rgba(0,212,255,1) 100%);
     box-sizing: border-box;
     text-align: center;
     width: 100%;
@@ -48,7 +50,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 12px;
+    margin: 0 6px;
   }
 
   #checkbox-menu{
@@ -130,14 +132,14 @@ header{
 #text{
     width: 100%;
     height: 100%;
-    position:relative;
+    position: relative;
     resize: none;
     display: inline-block;
 }
 
 .toolStyle{
     align-items: center;
-    justify-content: left;
+    justify-content: space-between;
     padding-left: 2vw;
     width: 100%;
     height: 2em;
