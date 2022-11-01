@@ -175,29 +175,32 @@ document.addEventListener("DOMContentLoaded", function () {
       // removeStyle();
   })
 
-  // $("#files li p span").on('click', function(e){
-  //     let idx = Number($(this).attr('id')) - 1;
-  //     let arr = localStorage.getItem("fileArray");
-  //     parsedArr = JSON.parse(arr);
+  $("#files li p span").on('click', function(e){
+    //   let idx = Number($(this).attr('id')) ;
+      let arr = localStorage.getItem("fileArray");
+      parsedArr = JSON.parse(arr);
 
-  //     if(parsedArr.len > 0){
-  //         let idxVal = parsedArr[idx];
-  //         localStorage.removeItem(idxVal)
-  //         removeListItem(parsedArr)
-  //         parsedArr.splice(idx, 1)
-  //         // displayFile(parsedArr)
-  //         arr = JSON.stringify(parsedArr);
-  //         localStorage.setItem("fileArray", arr);
+      
+    //       let idxVal = parsedArr[idx];
+    const idxVal = e.target.previousSibling.data ;
+          console.log(idxVal);
+          localStorage.removeItem(idxVal)
+          const updatedList = parsedArr.filter(listItem => listItem !== idxVal)
+          console.log("updatedlist",updatedList);
+          const itemToRemove = parsedArr.filter(listItem => listItem == idxVal)
+        //   removeListItem(parsedArr)
+        //   parsedArr.splice(idx, 1)
+        //   displayFile(updatedList);
+        removeListItem(itemToRemove);
+          arr = JSON.stringify(updatedList);
+          localStorage.setItem("fileArray", arr);
+          
+    // console.log({e,y:$(this)});
+      
 
-  //     }
-  //     else{
-  //         localStorage.clear()
-  //     }
 
 
-
-
-  // })
+   })
 
   function displayFile(fileArray) {
 
@@ -209,9 +212,9 @@ document.addEventListener("DOMContentLoaded", function () {
           li.setAttribute("id", `${ele}`);
           li.setAttribute("class", "list");
 
-          // span = document.createElement("span")
-          // span.setAttribute("id", `${idx}`);
-          // span.appendChild(document.createTextNode("❌"))
+          span = document.createElement("span")
+          span.setAttribute("id", `${idx}`);
+          span.appendChild(document.createTextNode("❌"))
 
           p = document.createElement("p");
           // p.setAttribute("id", `${ele}`);
@@ -220,6 +223,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
           li.appendChild(p);
+          p.appendChild(span);
           ol.appendChild(li);
 
           idx += 1
